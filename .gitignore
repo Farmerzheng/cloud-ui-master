@@ -1,0 +1,46 @@
+# 我们做的每个Git项目中都需要一个“.gitignore”文件，这个文件的作用就是告诉Git哪些文件不需要添加到版本管理中。比如我们项目中的npm包(node_modules)，它在我们项目中是很重要的，但是它占的内存也是很大的，所以一般我们用Git管理的时候是不需要添加npm包的。
+# 常用的规则
+# /mtk/ 过滤整个文件夹
+# *.zip 过滤所有.zip文件
+# /mtk/do.c 过滤某个具体文件
+# .DS_Store：这个文件是Mac OS X用来存储文件夹的一些诸如自定义图标，ICON位置尺寸，窗口位置，显示列表种类以及一些像窗体自定义背景样式，颜色这样的元信息。默认情况下，Mac OS X下的每个文件夹下应该都会生成一个，包括网络介质存储盘和U盘这样的外部设备。
+# 忽略 .a 文件
+# *.a
+
+# 仅在当前目录下忽略 TODO 文件， 但不包括子目录下的 subdir/TODO
+# /TODO
+
+# 忽略 build/ 文件夹下的所有文件
+# build/
+
+# 忽略 doc/notes.txt, 不包括 doc/server/arch.txt
+# doc/*.txt
+
+.DS_Store
+/node_modules
+/dist
+
+/tests/e2e/videos/
+/tests/e2e/screenshots/
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+
+# Lock File
+package-lock.json
+yarn.lock
