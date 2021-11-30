@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import store from './store'
 
-console.log(process.env);
-
 Vue.config.errorHandler = function(err, vm, info) {
     Vue.nextTick(() => {
         store.commit('ADD_LOGS', {
